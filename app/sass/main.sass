@@ -27,6 +27,8 @@ a
 		background-color: darken($blue, 10%)
 
 // HEADER
+.header
+	padding-bottom: 170px
 
 .header-top
 	border-bottom: 2px solid #dedede
@@ -92,6 +94,7 @@ a
 
 .header-img
 	max-width: 100%
+	
 
 .btn-video
 	margin-left: 28px
@@ -103,6 +106,44 @@ a
 		color: $blue
 
 
+// Numbers
 
+.numbers
+	background: linear-gradient( 130deg, rgb(15,8,22) 0%, rgb(24,16,33) 64%, rgb(33,23,43) 90%)
+	padding: 120px 0
+	position: relative
+
+	.numbers-img
+		position: absolute
+		top: -120px
+		left: 8%
+		max-width: 100%
+
+	.numbers-item
+
+		&__number
+			font-size: 72px
+			color: #fff
+			font-weight: 900
+			padding-left: 20px
+			display: flex
+			align-items: center
+
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: 5px
+				height: 50px
+				border-radius: 5px
+				background-color: $blue
+				left: 15px
+
+		&__name
+			color: $blue
+		
+		&__per
+			color: $secondColor
 
 @import "media"
