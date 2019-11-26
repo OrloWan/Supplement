@@ -8,12 +8,13 @@
 body
 	font-family: 'Lato', sans-serif
 	font-size: 16px
+	color: $mainBlack
 
-*
-	transition: all 0.3s
+
 
 a
 	text-decoration: none
+	transition: all 0.3s
 
 .btn
 	display: inline-block
@@ -258,6 +259,152 @@ a
 			&:after
 				left: 0
 
+// REALMAN
+
+.realman
+	padding-bottom: 120px
+.realman-slider
+	margin-top: 85px
+
+	.slider-item
+		display: flex
+		align-items: center
+		
+
+		&__arrow
+			width: 60px
+			height: 60px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			border: 3px solid transparent
+
+		&__arrow.arrow-left
+			margin-right: auto
+		&__arrow.arrow-right
+			margin-left: auto
+
+		&__before
+			position: relative
+			max-width: 265px
+			height: 300px
+			position: relative
+			z-index: 10
+			
+
+			img
+				width: 100%
+				height: 100%
+
+		&__after
+			max-width: 360px
+			height: 400px
+			position: relative
+			margin-left: -60px
+
+			img
+				width: 100%
+				height: 100%
+
+		&__info
+			margin-left: 30px
+
+			&_kg
+				display: inline-block
+				font-size: 16px
+				font-weight: 300
+
+				&:first-child
+					margin-right: 30px
+
+				&-number
+					font-size: 40px
+					font-weight: 800
+
+				&-kg
+					text-transform: uppercase
+
+				&-desc
+					color: $blue
+					margin-top: 25px
+
+			
+			&_persone
+				margin-top: 50px
+				text-transform: uppercase
+				position: relative
+				padding-left: 22px
+				
+				&:before
+					content: ''
+					display: block
+					width: 4px
+					height: 100%
+					border-radius: 30px
+					background-color: $blue
+					position: absolute
+					top: 0
+					left: 0px
+
+				&-name
+					font-weight: 800
+					font-family: $raleway
+				
+				&-age
+					font-weight: 300
+		
+		// СТИЛИЗАЦИЯ СЛАЙДЕРА
+
+	.slick-arrow
+		width: 60px
+		height: 60px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		border: 3px solid #e4e8e9
+		font-size: 0
+		background-color: transparent
+		position: absolute
+		top: 50%
+		margin-top: -30px
+		outline: none
+		cursor: pointer
+
+	.slick-arrow.slick-next
+		right: 0
+		background: url('../img/slider-right.png') no-repeat center center
+
+	.slick-arrow.slick-prev
+		left: 0
+		z-index: 10
+		background: url('../img/slider-left.png') no-repeat center center
+
+	.slick-slide
+		outline: none
+
+	.slick-dots
+		list-style: none
+		display: flex
+		justify-content: center
+		margin: 0 auto
+		margin-top: 60px
+
+		button
+			font-size: 0
+			width: 15px
+			height: 15px
+			padding: 0
+			background-color: #e4e8e9
+			border: none
+			border-radius: 50%
+			margin-right: 20px
+
+		.slick-active
+
+			button
+				background-color: $blue
 	
 
 @import "media"
