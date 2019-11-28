@@ -5,6 +5,10 @@
 
 // GLOBAL STYLES
 
+*
+	margin: 0
+	padding: 0
+
 body
 	font-family: 'Lato', sans-serif
 	font-size: 16px
@@ -66,12 +70,34 @@ a
 		margin-top: 25px
 
 
+.slick-dots
+	list-style: none
+	display: flex
+	justify-content: center
+	margin: 0 auto
+
+	button
+		font-size: 0
+		width: 15px
+		height: 15px
+		padding: 0
+		background-color: #e4e8e9
+		border: none
+		border-radius: 50%
+		margin-right: 20px
+
+	.slick-active
+
+		button
+			background-color: $blue
+
+
 // HEADER
 .header
 	padding-bottom: 170px
 
 .header-top
-	border-bottom: 2px solid #dedede
+	border-bottom: 1px solid #dedede
 	margin-bottom: 180px
 
 	.header__logo
@@ -84,8 +110,8 @@ a
 		span
 			display: block
 			width: 35px
-			height: 5px
-			background-color: #525252
+			height: 6px
+			background-color: #777777
 			margin-bottom: 5px
 			border-radius: 5px
 
@@ -385,26 +411,68 @@ a
 		outline: none
 
 	.slick-dots
-		list-style: none
-		display: flex
-		justify-content: center
-		margin: 0 auto
 		margin-top: 60px
 
-		button
-			font-size: 0
-			width: 15px
-			height: 15px
-			padding: 0
-			background-color: #e4e8e9
-			border: none
-			border-radius: 50%
-			margin-right: 20px
 
-		.slick-active
+// CLIENT
 
-			button
+.client
+	background: url('../img/client-bg.png') no-repeat center
+	background-size: cover
+	padding-bottom: 125px
+	background-attachment: fixed
+
+	.section-title
+		color: #e5e5e5
+		padding-bottom: 75px
+
+		&__h
+			color: #e5e5e5
+
+	.client-slider-item
+		color: #a9a9a9
+		display: flex
+		flex-direction: column
+		align-items: center
+
+		&__text
+			text-align: center
+			line-height: 24px
+
+		&__client
+			display: flex
+			align-items: flex-start
+			margin-top: 35px
+
+		.client-img
+			width: 65px
+			height: 65px
+			margin-right: 30px
+
+			img
+				width: 100%
+				height: 100%
+
+		.client-info
+
+			&__name
+				font-size: $raleway
+				font-weight: bold
+				text-transform: uppercase
+				color: #e5e5e5
+				padding-top: 5px
+				padding-bottom: 5px
+
+			&__place:after
+				content: ''
+				display: block
+				margin-top: 15px
+				width: 35px
+				height: 5px
+				border-radius: 20px
 				background-color: $blue
-	
+
+	.slick-dots
+		margin-top: 50px
 
 @import "media"

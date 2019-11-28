@@ -12,3 +12,11 @@ $('.realman-slider').slick({
     }
   ]
 })
+
+
+$('.client-slider').slick({
+	dots: true,
+	infinite: true,
+	arrows: false,
+	autoplay: true
+})
